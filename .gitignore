@@ -1,2 +1,4 @@
 xlsx/
 *.code-workspace
+# I put anything related to the exam sent from the school (pdf, xlsx) in ITU/
+ITU/
