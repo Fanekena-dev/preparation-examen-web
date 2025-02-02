@@ -1,0 +1,55 @@
+CREATE DATABASE tea;
+USE tea;
+
+tea_variety
+  variety_id VARCHAR(70) PK
+  variety_name VARCHAR(200)
+  variety_occupancy_surface DECIMAL(10, 2) -- ex : 1 pied occupe 1,8 m2
+  variety_yield_per_foot DECIMAL(10, 2) -- kg de feuille par mois
+
+tea_plot
+  plot_number INT PK
+  plot_surface DECIMAL(10, 2) -- en hectare
+  tea_variety_planted V_vARCHAR(70) FK ref teaariety(variety_id)
+
+tea_human_gender
+  human_gender_id VARCHAR(70) PK
+  human_gender VARCHAR(100)
+
+tea_picker
+  picker_id VARCHAR(70) PK
+  picker_name VARCHAR(200)
+  picker_gender VARCHAR(70) FK ref tea_human_gender(human_gender)
+  picker_date_of_birth DATE
+
+tea_admin
+  admin_id VARCHAR(70) PK
+  admin_pwd VARCHAR(120)
+
+tea_expense_category
+  expense_category_id VARCHAR(70) PK
+  expense_category VARCHAR(100) -- engrais, carburant, logistique
+
+tea_salary_amount_picker -- salaire par kg cueilli pour chaque cueilleur
+  salary_amount_picker_id VARCHAR(70) PK
+  insert_date DATE DEFAULT CURRENT_TIMESTAMP
+  salary_amount DECIMAL(15, 2)
+  picker_id FK ref tea_picker(picker_id)
+
+tea_user
+  user_id VARCHAR(70) PK
+  username VARCHAR(100) UNIQUE
+  user_pwd VARCHAR(120)
+
+tea_picking
+  picking_id VARCHAR(70) PK
+  picking_date DATE
+  picker_id VARCHAR(70) FK ref tea_picker(picker_id)
+  plot_number INT FK ref tea_plot(plot_number)
+  picked_weight DECIMAL(10, 2) -- en kg
+
+tea_expense
+  expense_id VARCHAR(70) PK
+  expense_date DATE
+  expense_category VARCHAR(70) FK ref tea_expense_category(expense_category_id)
+  expense_amount DECIMAL(15, 2)
