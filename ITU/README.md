@@ -20,3 +20,8 @@ Libre office calc
 - Under allow, choose Cell Range
 - In Source, add: type
 
+# General sheet
+- Just summing useful information from TODO sheet
+
+# Estimation sheet
+- Using sumif
