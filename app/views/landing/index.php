@@ -8,8 +8,9 @@ $baseUrl = Flight::get("flight.base_url");
     <title><?= $title ?? "Template" ?></title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="<?= $baseUrl ?>/public/assets/bootstrap-5.3.3/css/bootstrap.min.css" rel="stylesheet">
-    <link href="<?= $baseUrl ?>/public/assets/css/theme.css" rel="stylesheet">
+    <link href="<?= $baseUrl ?>/public/assets/framework/bootstrap-5.3.3/css/bootstrap.min.css" rel="stylesheet">
+    <link href="<?= $baseUrl ?>/public/assets/lib/fontawesome-free-6.7.2-web/css/all.min.css" rel="stylesheet">
+    <link href="<?= $baseUrl ?>/public/assets/src/css/theme.css" rel="stylesheet">
     <style>
         .fakeimg {
             height: 200px;
@@ -30,6 +31,7 @@ $baseUrl = Flight::get("flight.base_url");
                 <a class="navbar-brand" href="/">
                     <?php // include 'public/layouts/logo.php'; ?>
                     LOGO
+                    <i class="fa-brands fa-facebook"></i>
                 </a>
                 <!-- Toggle Button for Mobile View -->
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
@@ -106,10 +108,10 @@ $baseUrl = Flight::get("flight.base_url");
         <p>Footer</p>
     </div>
 
-    <script src="<?= $baseUrl ?>/public/assets/bootstrap-5.3.3/js/bootstrap.bundle.min.js"></script>
-    <script src="<?= $baseUrl ?>/public/assets/js/jquery-3.7.1.min.js"></script>
-    <script src="<?= $baseUrl ?>/public/assets/js/main.js"></script>
-    <script src="<?= $baseUrl ?>/public/assets/js/chart.umd.js"></script>
+    <script src="<?= $baseUrl ?>/public/assets/framework/bootstrap-5.3.3/js/bootstrap.bundle.min.js"></script>
+    <script src="<?= $baseUrl ?>/public/assets/lib/jquery-3.7.1.min.js"></script>
+    <script src="<?= $baseUrl ?>/public/assets/lib/chart.umd.js"></script>
+    <script src="<?= $baseUrl ?>/public/assets/src/js/main.js"></script>
     <!-- Mirrored from www.w3schools.com/bootstrap5/tryit.asp?filename=trybs_template1 by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 05 Sep 2022 15:39:46 GMT -->
 
 </html>
