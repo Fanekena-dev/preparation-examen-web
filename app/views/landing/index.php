@@ -9,6 +9,7 @@ $baseUrl = Flight::get("flight.base_url");
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="<?= $baseUrl ?>/public/assets/bootstrap-5.3.3/css/bootstrap.min.css" rel="stylesheet">
+    <link href="<?= $baseUrl ?>/public/assets/fontawesome-free-6.7.2-web/css/all.min.css" rel="stylesheet">
     <link href="<?= $baseUrl ?>/public/assets/css/theme.css" rel="stylesheet">
     <style>
         .fakeimg {
@@ -30,6 +31,7 @@ $baseUrl = Flight::get("flight.base_url");
                 <a class="navbar-brand" href="/">
                     <?php // include 'public/layouts/logo.php'; ?>
                     LOGO
+                    <i class="fa-brands fa-facebook"></i>
                 </a>
                 <!-- Toggle Button for Mobile View -->
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
